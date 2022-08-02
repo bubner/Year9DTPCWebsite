@@ -1,5 +1,22 @@
 /* Lucas Bubner, 2022 */
 
-html {
-    background-color: red;
+#chatbox_button {
+    border-radius: 50px;
+    position: fixed;
+    background-color: #85d0ff;
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    bottom: 0px;
+    transform: translate(-10px, -10px);
+}
+
+#chatbox_button img {
+    width: 75px;
+    height: auto;
+    transform: translate(-12px, -12px);
+}
+
+#chatbox_button:hover {
+    cursor: pointer;
 }
