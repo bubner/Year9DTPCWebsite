@@ -1,5 +1,43 @@
 /* Lucas Bubner, 2022 */
 
+body {
+   width: 960px;
+   height: 540px;
+   margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --size-divisor: 1.6;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --size-divisor: 1.5;
+  }
+}
+@media (min-width: 992px) { 
+  :root {
+    --size-divisor: 1;
+  }
+}
+@media (min-width: 1200px) { 
+  :root {
+    --size-divisor: .67;
+  }
+}
+@media (min-width: 1700px) { 
+  :root {
+    --size-divisor: .34;
+  }
+}
+
+/* calc(x / var(--size-divisor)); */
+
+* {
+    font-family: Lato;
+}
+
 #chatbox_button {
     border-radius: 50px;
     position: fixed;
@@ -19,4 +57,159 @@
 
 #chatbox_button:hover {
     cursor: pointer;
+}
+
+#chat_container {
+    background-color: #ababab;
+    background-image: url("/images/blue.jpg");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    border: 3px solid #85d0ff;
+    border-radius: 30px;
+    width: 60%;
+    height: 70%;
+    right: 7px;
+    float: right;
+    transform: translateY(14.5vh);
+    opacity: 1;
+    transition: opacity 2s linear;
+    position: fixed;
+    display: none;
+}
+
+#enterformcontainer {
+    width: 100%;
+}
+
+#chat_container #display, #chat_container #input, #chat_container #enter {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+    height: auto;
+    width: calc(200px / var(--size-divisor));
+}
+
+#enterform {
+    text-align: center;
+    top: 50%;
+    transform: translateY(23vh);
+}
+
+#chat_container #display {
+    font-size: calc(24px / var(--size-divisor));
+}
+
+#chat_container #input {
+   
+}
+
+#chat_container #enter {
+    
+}
+
+#primarychat {
+    
+}
+
+@keyframes moveIn {
+    0% { transform: translate(0, 0); display: block; }
+    100% { transform: translate(0, 1); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Chat Page Layout */
+
+.chat {
+    display: flex;
+}
+
+.chat__sidebar {
+    height: 100vh;
+    color: white;
+    overflow-y: scroll;
+}
+
+/* Chat styles */
+
+.chat__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
+.chat__messages {
+    flex-grow: 1;
+    padding: 24px 24px 0 24px;
+    overflow-y: scroll;
+}
+
+/* Message Styles */
+
+.message {
+    margin-bottom: 16px;
+}
+
+.message__name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.message__meta {
+    font-size: 14px;
+}
+
+/* Message Composition Styles */
+
+.compose {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 16px;
+    padding: 24px;
+}
+
+.compose form {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 16px;
+}
+
+.compose input {
+    border: 1px solid #eeeeee;
+    width: 100%;
+    padding: 12px;
+    margin: 0 16px 0 0;
+    flex-grow: 1;
+}
+
+.compose button {
+    font-size: 14px;
+}
+
+/* Chat Sidebar Styles */
+
+.room-title {
+    font-weight: 400;
+    font-size: 22px;
+    padding: 24px;
+}
+
+.list-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 4px;
+    padding: 12px 24px 0 24px;
+}
+
+.users {
+    list-style-type: none;
+    font-weight: 300;
+    padding: 12px 24px 0 24px;
 }

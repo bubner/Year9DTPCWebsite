@@ -31,8 +31,8 @@ io.on("connection", socket => {
     } else {
       socket.join(user);
 
-      socket.emit("message", generateMessage("Admin", "Welcome!"));
-      socket.broadcast.to(user).emit("message", generateMessage("Admin", `${user.username} has joined!`));
+      socket.emit("message", generateMessage("SYSTEM", "Connection successful."));
+      socket.broadcast.to(user).emit("message", generateMessage("SYSTEM", `${user.username} has joined!`));
       callback();
     }
   });
@@ -44,21 +44,15 @@ io.on("connection", socket => {
     callback();
   });
 
-  socket.on("sendLocation", (coords, callback) => {
-    const user = getUser(socket.id);
-    io.to(user).emit("locationMessage", generateLocationMessage(user.username, `https://www.google.com/maps?q=${coords.latitude},${coords.longitude}`));
-    callback();
-  });
-
   socket.on("disconnect", () => {
     const user = removeUser(socket.id);
 
     if (user) {
-      io.to(user).emit("message", generateMessage("Admin", `${user.username} has left!`));
+      io.to(user).emit("message", generateMessage("SYSTEM", `${user.username} has left!`));
       };
   });
 });
 
 server.listen(port, () => {
-  console.log(`Server is running on ${port}!`);
+  console.log(`Server is running on port ${port}!`);
 });
