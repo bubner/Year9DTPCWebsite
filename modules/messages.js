@@ -1,4 +1,3 @@
-// Module to generate a message based on time, username and message
 const generateMessage = (username, text) => {
   return {
     username,
@@ -7,7 +6,15 @@ const generateMessage = (username, text) => {
   };
 };
 
-// Send the module to the app
+const generateLocationMessage = (username, url) => {
+  return {
+    username,
+    url,
+    createdAt: new Date().getTime()
+  };
+};
+
 module.exports = {
-  generateMessage
+  generateMessage,
+  generateLocationMessage
 };

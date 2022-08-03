@@ -1,55 +1,50 @@
-// Array of those currently active in the chat
 const users = [];
 
-// Module to manage the user experience
-const userJoin = ({ id, username }) => {
-    
-    // Make the username clean to read
-    username = username.trim();
+const addUser = ({ id, username, room }) => {
+  username = username.trim();
+  room = "livechat"; // Uses one room only, as we don't need more than one
 
-    // Check if the username was entered
-    if (!username) {
-        return {
-            error: "A display name is required!"
-        };
-    }
+  if (!username || !room) {
+    return {
+      error: "Username and room are required!"
+    };
+  }
 
-    // Check if the name entered already is online
-    const existingUser = users.find(user => {
-        return user.username === username;
-    });
+  const existingUser = users.find(user => {
+    return user.room === room && user.username === username;
+  });
 
-    // Checks if the entered name is already in the chat
-    if (existingUser) {
-        return {
-            error: "Display name is currently in use!"
-        };
-    }
+  if (existingUser) {
+    return {
+      error: "Username is in use!"
+    };
+  }
 
-    // If all these tests pass, append the user to the active list
-    const user = { id, username };
-    users.push(user);
-    return { user };
+  const user = { id, username, room };
+  users.push(user);
+  return { user };
 };
 
-// Removes the user once they have left the chat
 const removeUser = id => {
-    const index = users.findIndex(user => user.id === id);
+  const index = users.findIndex(user => user.id === id);
 
-    // Prevent negative indices
-    if (index !== -1) {
-        return users.splice(index, 1)[0];
-    }
+  if (index !== -1) {
+    return users.splice(index, 1)[0];
+  }
 };
 
-// Gets a specific user from the active chat
 const getUser = id => {
   return users.find(user => user.id === id);
 };
 
-// Export the modules to the app
+const getUsersInRoom = room => {
+  room = room.trim().toLowerCase();
+  return users.filter(user => user.room === room);
+};
+
 module.exports = {
-  userJoin,
+  addUser,
   removeUser,
-  getUser
+  getUser,
+  getUsersInRoom
 };
