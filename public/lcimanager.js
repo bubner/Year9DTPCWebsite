@@ -1,17 +1,23 @@
+// Lucas Bubner, 2022
+
 const socket = io();
 
+// Target the message form DOM
 const $messageForm = document.querySelector("#message-form");
 const $messageFormInput = $messageForm.querySelector("input");
 const $messageFormButton = $messageForm.querySelector("button");
 const $sendLocationBtn = document.querySelector("#send-location");
 const $messages = document.querySelector("#messages");
 
+// Grab the templates for rendering from minichat.html
 const messageTemplate = document.querySelector("#message-template").innerHTML;
 const locationMessageTemplate = document.querySelector("#location-message-template").innerHTML;
 const sidebarTemplate = document.querySelector("#sidebar-template").innerHTML;
 
+// Query the room
 const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true });
 
+// Auto scroll upon messages being delivered
 const autoscroll = () => {
   const $newMessage = $messages.lastElementChild;
 
@@ -27,29 +33,31 @@ const autoscroll = () => {
     $messages.scrollTop = $messages.scrollHeight;
   }
 };
-
+// When a message is recieved, use the template to render it with the correct metadata
 socket.on("message", message => {
   const html = Mustache.render(messageTemplate, {
     username: message.username,
     message: message.text,
-    createdAt: moment(message.createdAt).format("h:mm a")
+    createdAt: moment(message.createdAt).format("h:mm:ss a")
   });
-
+  // Insert the message into the correct location, and autoscroll to compensate
   $messages.insertAdjacentHTML("beforeend", html);
   autoscroll();
 });
 
+// Handles location instead of a message
 socket.on("locationMessage", message => {
   console.log(message);
   const html = Mustache.render(locationMessageTemplate, {
     username: message.username,
     url: message.url,
-    createdAt: moment(message.createdAt).format("h:mm a")
+    createdAt: moment(message.createdAt).format("h:mm:ss a")
   });
 
   $messages.insertAdjacentHTML("beforeend", html);
 });
 
+// Renders the sidebar of users
 socket.on("roomData", ({ room, users }) => {
   const html = Mustache.render(sidebarTemplate, {
     room,
@@ -59,6 +67,7 @@ socket.on("roomData", ({ room, users }) => {
   document.querySelector("#sidebar").innerHTML = html;
 });
 
+// Listens for the send button being pressed and prevents multi-request buffer attacks
 $messageForm.addEventListener("submit", e => {
   e.preventDefault();
 
@@ -73,14 +82,14 @@ $messageForm.addEventListener("submit", e => {
 
     if (error) {
       return console.log(error);
-    } else {
-      console.log("Message delivered!");
     }
   });
 });
 
+// Manages getting the location of the user upon clicking send location
 $sendLocationBtn.addEventListener("click", () => {
   if (!navigator.geolocation) {
+    // Browser incompatibilities
     return alert("Geolocation is not supported by your browser.");
   } else {
     $sendLocationBtn.setAttribute("disabled", "disabled");
@@ -94,15 +103,13 @@ $sendLocationBtn.addEventListener("click", () => {
         },
         error => {
           $sendLocationBtn.removeAttribute("disabled");
-          if (!error) {
-            console.log("Location shared!");
-          }
         }
       );
     });
   }
 });
 
+// Catch any errors that might happen
 socket.emit("join", { username, room }, error => {
   if (error) {
     alert(error);

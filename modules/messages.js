@@ -1,3 +1,6 @@
+// Lucas Bubner, 2022
+
+// Manages message generation with username, text, and creation time
 const generateMessage = (username, text) => {
   return {
     username,
@@ -6,6 +9,7 @@ const generateMessage = (username, text) => {
   };
 };
 
+// Adds location url instead of message
 const generateLocationMessage = (username, url) => {
   return {
     username,
@@ -14,6 +18,7 @@ const generateLocationMessage = (username, url) => {
   };
 };
 
+// Exports to our application
 module.exports = {
   generateMessage,
   generateLocationMessage

@@ -69,7 +69,7 @@ body {
 
 #chat_container {
     background-color: #ababab;
-    background-image: url("/images/blue.jpg");
+    background-image: url("/images/bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,8 +157,6 @@ iframe {
     border-radius: 30px;
 }
 
-/* Chat Page Layout */
-
 .chat {
     display: flex;
 }
@@ -171,13 +169,11 @@ iframe {
 }
 
 #minichatbody {
-    background-image: url("/images/blue.jpg");
+    background-image: url("/images/bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/* Chat styles */
 
 .chat__main {
     flex-grow: 1;
@@ -192,10 +188,8 @@ iframe {
     background-color: #36393f;
     border-radius: 15px;
     padding: 24px 24px 0 24px;
-    overflow: auto;
+    overflow-y: scroll;
 }
-
-/* Message Styles */
 
 .message {
     margin-bottom: 16px;
@@ -214,8 +208,6 @@ iframe {
 .message__meta {
     font-size: 14px;
 }
-
-/* Message Composition Styles */
 
 .compose {
     display: flex;
@@ -247,8 +239,6 @@ iframe {
     height: fit-content;
     transform: translateY(10px);
 }
-
-/* Chat Sidebar Styles */
 
 .users {
     color: black;

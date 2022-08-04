@@ -1,21 +1,27 @@
+// Lucas Bubner, 2022
+
+// Target DOM elements
 const form = document.getElementById("enterform");
 const container = document.getElementById("chat_container");
 const chat = document.getElementById("primarychat");
 var loaded = false;
 
+// Sleep function in ms
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
+// Once a name is given and join is administered, pass username through query string to iframe and hide the input form
 function loadchat(event) {
     event.preventDefault();
     form.style.display = "none";
     chat.style.display = "block";
-    document.getElementsByName("iframe")[0].src = "minichat.html";
+    document.getElementsByName("iframe")[0].src = "minichat.html?username=" + document.getElementById("input").value;
     document.getElementsByName("iframe")[0].style.display = "block";
     loaded = true;
 }
 
+// Manages chat button on page to open the correct menu upon click
 function chattoggle() {
     if (container.style.display != "flex") {
         container.style.animation = "moveIn 0.75s, fadeIn 1s";
