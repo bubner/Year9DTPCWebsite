@@ -246,3 +246,12 @@ iframe {
     font-weight: 300;
     padding: 12px 24px 0 24px;
 }
+
+.sidebar {
+    background-color: #36393f;
+    width: 70px;
+    height: 100%;
+    right: 0;
+    z-index: -1;
+    position: fixed;
+}
