@@ -1,0 +1,65 @@
+<!-- Lucas Bubner, 2022 -->
+<html>
+
+<head>
+    <meta name="description" content="Year 9 Digital Technology node.js interactive website.">
+    <meta name="author" content="Lucas Bubner - 9WI 2022">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PC Analysis</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="chatmanager.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.8.0/qs.min.js" defer></script>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+        integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.1/qs.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="chatbox_button" onclick="chattoggle();">
+        <img src="images/chatbox.png" title="Open and close built-in live chat">
+    </div>
+    <div id="alt_button" onclick="altbutton();">
+        <img src="images/gdoc.svg" title="View original Google Doc">
+    </div>
+    <div id="chat">
+        <div id="chat_container" style="display: none;">
+            <div id="enterformcontainer">
+                <form id="enterform" style="display: none;" method="POST">
+                    <input type="text" name="username" id="input" placeholder="Display name" required> <br> <br>
+                    <button type="submit" id="enter">Enter chatroom (beta)</button>
+                </form>
+            </div>
+            <div id="primarychat">
+                <iframe name="iframe" src="" frameBorder="0">Browser does not support chat functions.</iframe>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <p class="sidebartext">GPU</p>
+                <p id="notice">Please use a bigger screen to navigate this site.</p>
+            </li>
+            <li><a href="/"><button type="submit">Info</button></a></li> <br>
+            <li><a href="/cpu"><button type="submit">CPU</button></a></li> <br>
+            <li><a href="/mobo"><button type="submit">Motherboard</button></a></li> <br>
+            <li><a href="/gpu"><button type="submit">GPU</button></a></li> <br>
+            <li><a href="/psu"><button type="submit">PSU</button></a></li> <br>
+            <li><a href="/cool"><button type="submit">Cooling</button></a></li> <br>
+            <li><a href="/stor"><button type="submit">Storage</button></a></li> <br>
+            <li><a href="/case"><button type="submit">Case</button></a></li>
+        </ul>
+    </div>
+    <div class="common">
+        
+    </div>
+</body>
+
+</html>

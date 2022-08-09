@@ -4,6 +4,7 @@
 const form = document.getElementById("enterform");
 const container = document.getElementById("chat_container");
 const chat = document.getElementById("primarychat");
+const alt = document.getElementById("alt_button");
 var loaded = false;
 
 // Sleep function in ms
@@ -19,6 +20,13 @@ function loadchat(event) {
     document.getElementsByName("iframe")[0].src = "minichat.html?username=" + document.getElementById("input").value;
     document.getElementsByName("iframe")[0].style.display = "block";
     loaded = true;
+}
+
+// Manages the google doc redirect alt_button
+function altbutton() {
+    window.location.href = (
+        "https://docs.google.com/document/d/1Ab36coDlzcoVIDp8qCK0UtrjCJSAugaY82hCt_v-Kl8/edit?usp=sharing"
+    );
 }
 
 // Manages chat button on page to open the correct menu upon click
@@ -53,3 +61,4 @@ function chattoggle() {
 }
 
 form.addEventListener('submit', loadchat);
+alt.addEventListener('submit', altbutton);

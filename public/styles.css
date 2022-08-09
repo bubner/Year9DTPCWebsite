@@ -6,19 +6,26 @@ body {
 
 ul {
     list-style: none;
-    position: fixed;
+    position: relative;
+    text-align: center;
     margin: 0;
     border: 0;
     padding: 1rem;
 }
 
-ul li {
+ul li button {
     text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 15px 18px;
+    background-color: #f5f5f5;
     z-index: 1;
 }
 
 ul li .sidebartext {
     color: white;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -57,12 +64,78 @@ ul li .sidebartext {
     }
 }
 
+@media (min-height: 670px) {
+    :root {
+        --part-sep: 10;
+    }
+}
+
+@media (max-height: 670px) {
+    .sidebar br {
+        line-height: 0.7;
+    }
+}
+
+@media (max-height: 600px) {
+    .sidebar br {
+        line-height: 0.4;
+    }
+}
+
+@media (max-height: 570px) {
+    .sidebar br {
+        line-height: 0.2;
+    }
+}
+
+@media (max-height: 550px) {
+    .sidebar button {
+        padding: 12px 18px;
+    }
+}
+
+@media (max-height: 500px) {
+    .sidebar br {
+        line-height: 0.1;
+    }
+    
+    .sidebar button {
+        padding: 8px 18px;
+    }
+}
+
+@media (max-height: 410px) {
+    .sidebar button {
+        padding: 4px 18px;
+    }
+}
+
+@media (max-height: 300px) {
+    .sidebar button {
+        display: none;
+    }
+    #notice { 
+        display: block;
+    }
+}
+
+@media (min-height: 301px) {
+    #notice { 
+        display: none;
+    }
+}
+
+#notice { 
+    color: white;
+    font-style: italic;
+}
 
 * {
     font-family: Lato;
 }
 
-#chatbox_button {
+#chatbox_button,
+#alt_button {
     border-radius: 50px;
     position: fixed;
     z-index: 1;
@@ -80,8 +153,20 @@ ul li .sidebartext {
     transform: translate(-12px, -12px);
 }
 
-#chatbox_button:hover {
+#chatbox_button:hover,
+#alt_button:hover,
+.sidebar button {
     cursor: pointer;
+}
+
+#alt_button {
+    right: 65px;
+}
+
+#alt_button img {
+    transform: translate(15px, 12px);
+    width: 20px;
+    height: auto;
 }
 
 #chat_container {
@@ -270,8 +355,9 @@ iframe {
 
 .sidebar {
     background-color: #36393f;
-    width: 70px;
+    width: 140px;
     height: 100%;
     right: 0;
     position: fixed;
+    border-radius: 30px;
 }

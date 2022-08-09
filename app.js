@@ -67,7 +67,7 @@ io.on("connection", socket => {
         } else {
             socket.join(user.room);
 
-    // Notify upon successful connection
+            // Notify upon successful connection
             socket.emit("message", generateMessage("SYSTEM", `Connection successful. Welcome, ${user.username}!`));
             socket.broadcast.to(user.room).emit("message", generateMessage("SYSTEM", `${user.username} has joined!`));
             io.to(user.room).emit("roomData", {
@@ -78,7 +78,7 @@ io.on("connection", socket => {
             callback();
         }
     });
-    
+
     // Handles attaching a message to the correct user
     socket.on("sendMessage", (message, callback) => {
         const user = getUser(socket.id);
