@@ -16,7 +16,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 require("dotenv").config();
 
-// Set public directory for static JS, CSS, and minichat
+// Set public directory for static JS, CSS, images, and minichat
 const port = process.env.PORT || 8080;
 const publicDirectoryPath = path.join(__dirname, "./public");
 app.use(express.static(publicDirectoryPath));

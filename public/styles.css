@@ -1,8 +1,31 @@
+/* CSS Document */
 /* Lucas Bubner, 2022 */
 
+* {
+    font-family: "Lato", sans-serif;
+}
+
 body {
+    scrollbar-width: auto;
+    scrollbar-color: #b2b2b3, #fff;
     margin: 0 auto;
 }
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #b2b2b3;
+    border-radius: 6px;
+    border: 3px solid #fff;
+}
+
+/* Sidebar and chatbox */
 
 ul {
     list-style: none;
@@ -64,12 +87,6 @@ ul li .sidebartext {
     }
 }
 
-@media (min-height: 670px) {
-    :root {
-        --part-sep: 10;
-    }
-}
-
 @media (max-height: 670px) {
     .sidebar br {
         line-height: 0.7;
@@ -128,10 +145,6 @@ ul li .sidebartext {
 #notice { 
     color: white;
     font-style: italic;
-}
-
-* {
-    font-family: Lato;
 }
 
 #chatbox_button,
@@ -220,38 +233,6 @@ ul li .sidebartext {
 
 #chat_container #enter {
     font-size: calc(12px / var(--size-divisor));
-}
-
-@keyframes moveIn {
-    0% {
-        transform: translate(0, 0);
-        display: block;
-    }
-
-    100% {
-        transform: translate(0, 1);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        display: none;
-    }
 }
 
 iframe {
@@ -360,4 +341,47 @@ iframe {
     right: 0;
     position: fixed;
     border-radius: 30px;
+}
+
+/* Custom animations */ 
+
+@keyframes moveIn {
+    0% {
+        transform: translate(0, 0);
+        display: block;
+    }
+
+    100% {
+        transform: translate(0, 1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* Information flexboxes */
+
+.common {
+    display: flex;
+    width: 1770px;
+    height: 960px;
+    overflow: auto;
 }
