@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="chatmanager.js" defer></script>
     <script src="lcimanager.js" defer></script>
+    <script src="redirectmanager.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.8.0/qs.min.js" defer></script>
@@ -39,7 +40,18 @@
         </div>
     </div>
     <div class="sidebar">
-        
+        <ul>
+            <li><p class="sidebartext">PARTS</p></li>
+            <li><button onclick="pageManage('index');">Info</button></li>
+            <li><button onclick="pageManage('cpu');">CPU</button></li>
+	        <li><button onclick="pageManage('mobo');">Motherboard</button></li>
+            <li><button onclick="pageManage('gpu');">GPU</button></li>
+            <li><button onclick="pageManage('ram');">RAM</button></li>
+            <li><button onclick="pageManage('psu');">PSU</button></li>
+            <li><button onclick="pageManage('cool');">Cooling</button></li>
+            <li><button onclick="pageManage('stor');">Storage</button></li>
+            <li><button onclick="pageManage('case');">Case</button></li>
+        </ul>
     </div>
 </body>
 

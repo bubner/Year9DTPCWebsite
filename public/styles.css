@@ -1,9 +1,25 @@
 /* Lucas Bubner, 2022 */
 
 body {
-    width: 960px;
-    height: 540px;
     margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    position: fixed;
+    margin: 0;
+    border: 0;
+    padding: 1rem;
+}
+
+ul li {
+    text-align: center;
+    z-index: 1;
+}
+
+ul li .sidebartext {
+    color: white;
+    font-weight: bold;
 }
 
 #minichatbody {
@@ -49,6 +65,7 @@ body {
 #chatbox_button {
     border-radius: 50px;
     position: fixed;
+    z-index: 1;
     background-color: #85d0ff;
     width: 50px;
     height: 50px;
@@ -83,10 +100,12 @@ body {
     opacity: 1;
     position: fixed;
     display: none;
+    z-index: 1;
 }
 
 #enterformcontainer {
     width: 100%;
+    z-index: 1;
 }
 
 #chat_container #display,
@@ -154,11 +173,13 @@ iframe {
     height: 100%;
     width: 60vw;
     display: none;
+    z-index: 1;
     border-radius: 30px;
 }
 
 .chat {
     display: flex;
+    z-index: 1;
 }
 
 .chat__sidebar {
@@ -252,6 +273,5 @@ iframe {
     width: 70px;
     height: 100%;
     right: 0;
-    z-index: -1;
     position: fixed;
 }
