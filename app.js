@@ -26,6 +26,35 @@ app.get("/", (req, res) => {
     res.sendFile('./index.html', { root: __dirname });
 });
 
+// Additional requests for each PC part
+app.get("/cpu", (req, res) => {
+    res.sendFile('./parts/cpu.html', { root: __dirname });
+});
+
+app.get("/mobo", (req, res) => {
+    res.sendFile('./parts/motherboard.html', { root: __dirname });
+});
+
+app.get("/gpu", (req, res) => {
+    res.sendFile('./parts/graphics.html', { root: __dirname });
+});
+
+app.get("/psu", (req, res) => {
+    res.sendFile('./parts/powersupply.html', { root: __dirname });
+});
+
+app.get("/cool", (req, res) => {
+    res.sendFile('./parts/cooling.html', { root: __dirname });
+});
+
+app.get("/stor", (req, res) => {
+    res.sendFile('./parts/storage.html', { root: __dirname });
+});
+
+app.get("/case", (req, res) => {
+    res.sendFile('./parts/case.html', { root: __dirname });
+});
+
 // Handles connection through socket.io websocket when minichat is initialised
 io.on("connection", socket => {
     console.log("New WebSocket connection");
