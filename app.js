@@ -39,6 +39,10 @@ app.get("/gpu", (req, res) => {
     res.sendFile('./parts/graphics.html', { root: __dirname });
 });
 
+app.get("/ram", (req, res) => {
+    res.sendFile('./parts/memory.html', { root: __dirname });
+});
+
 app.get("/psu", (req, res) => {
     res.sendFile('./parts/powersupply.html', { root: __dirname });
 });
@@ -53,6 +57,10 @@ app.get("/stor", (req, res) => {
 
 app.get("/case", (req, res) => {
     res.sendFile('./parts/case.html', { root: __dirname });
+});
+
+app.get("/misc", (req, res) => {
+    res.sendFile('./parts/other.html', { root: __dirname });
 });
 
 // Handles connection through socket.io websocket when minichat is initialised

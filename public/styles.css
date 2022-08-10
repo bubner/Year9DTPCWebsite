@@ -6,8 +6,9 @@
 }
 
 body {
+    background-color: #c4c4c4;
     scrollbar-width: auto;
-    scrollbar-color: #b2b2b3, #fff;
+    scrollbar-color: #000, #c4c4c4;
     margin: 0 auto;
 }
 
@@ -16,13 +17,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #fff;
+    background: #c4c4c4;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #b2b2b3;
-    border-radius: 6px;
-    border: 3px solid #fff;
+    background-color: #000;
+    border-radius: 8px;
+    border: 3px solid #c4c4c4;
 }
 
 /* Sidebar and chatbox */
@@ -50,6 +51,21 @@ ul li .sidebartext {
     color: white;
     font-size: 1.5em;
     font-weight: bold;
+}
+
+ul li button:hover {
+    color: #fff;
+    background-color: #5e76ff;
+}
+
+.disabled { 
+    background-color: #374597 !important;
+    color: white !important;
+}
+
+.disabled:hover {
+    color: #fff !important;
+    cursor: not-allowed !important;
 }
 
 #minichatbody {
@@ -377,11 +393,34 @@ iframe {
     }
 }
 
+@keyframes generate {
+    0% {
+        transform: translate(0px, 80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+  }
+
 /* Information flexboxes */
 
-.common {
+.common, .infopage {
     display: flex;
-    width: 1770px;
-    height: 960px;
-    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: stretch;
+    gap: 5px;
+    width: calc(100vw - 140px);
+    height: auto;
+    overflow: hidden;
+}
+
+.common div {
+    padding: 20px;
+    color: white;
+    background-color: #0063a0;
+    border: 4px solid #889aff;
+    border-radius: 30px;
 }

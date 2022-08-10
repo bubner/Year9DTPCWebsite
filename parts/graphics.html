@@ -9,6 +9,7 @@
     <title>PC Analysis</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="chatmanager.js" defer></script>
+    <script src="animmanager.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.8.0/qs.min.js" defer></script>
@@ -50,15 +51,39 @@
             <li><a href="/"><button type="submit">Info</button></a></li> <br>
             <li><a href="/cpu"><button type="submit">CPU</button></a></li> <br>
             <li><a href="/mobo"><button type="submit">Motherboard</button></a></li> <br>
-            <li><a href="/gpu"><button type="submit">GPU</button></a></li> <br>
+            <li><a href="/gpu"><button type="submit" class="disabled" disabled>GPU</button></a></li> <br>
+            <li><a href="/ram"><button type="submit">Memory</button></a></li> <br>
             <li><a href="/psu"><button type="submit">PSU</button></a></li> <br>
             <li><a href="/cool"><button type="submit">Cooling</button></a></li> <br>
             <li><a href="/stor"><button type="submit">Storage</button></a></li> <br>
-            <li><a href="/case"><button type="submit">Case</button></a></li>
+            <li><a href="/case"><button type="submit">Case</button></a></li> <br>
         </ul>
     </div>
     <div class="common">
-        
+        <div class="itemname">
+            <b>ITEM</b>
+        </div>
+        <div class="itemimage">
+            
+        </div>
+        <div class="iteminfo">
+            <b>INFORMATION</b>
+        </div>
+        <div class="itemdescription">
+            <b>DESCRIPTION</b>
+        </div>
+        <div class="itemchoice">
+            <b>WHY THIS ITEM</b>
+        </div>
+        <div class="itemlocation">
+            <b>INSTALLATION LOCATION</b>
+        </div>
+        <div class="itemstats">
+            <b>PERFORMANCE</b>
+        </div>
+        <div class="itemnotes">
+            <b>ADDITIONAL</b>
+        </div>
     </div>
 </body>
 
