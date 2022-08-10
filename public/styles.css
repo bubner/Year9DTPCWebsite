@@ -103,31 +103,31 @@ ul li button:hover {
     }
 }
 
-@media (max-height: 670px) {
+@media (max-height: 720px) {
     .sidebar br {
         line-height: 0.7;
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 660px) {
     .sidebar br {
         line-height: 0.4;
     }
 }
 
-@media (max-height: 570px) {
+@media (max-height: 610px) {
     .sidebar br {
         line-height: 0.2;
     }
 }
 
-@media (max-height: 550px) {
+@media (max-height: 590px) {
     .sidebar button {
         padding: 12px 18px;
     }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 540px) {
     .sidebar br {
         line-height: 0.1;
     }
@@ -137,13 +137,13 @@ ul li button:hover {
     }
 }
 
-@media (max-height: 410px) {
+@media (max-height: 450px) {
     .sidebar button {
         padding: 4px 18px;
     }
 }
 
-@media (max-height: 300px) {
+@media (max-height: 375px) {
     .sidebar button {
         display: none;
     }
@@ -152,7 +152,7 @@ ul li button:hover {
     }
 }
 
-@media (min-height: 301px) {
+@media (min-height: 376px) {
     #notice { 
         display: none;
     }
@@ -442,4 +442,5 @@ iframe {
     background-color: #0063a0;
     border: 4px solid #889aff;
     border-radius: 30px;
+    display: none;
 }

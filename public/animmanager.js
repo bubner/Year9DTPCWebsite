@@ -7,6 +7,8 @@ const allanchors = document.querySelectorAll('a');
 
 // Run over each div and apply a fade in animation to each of them
 for (let i = 0, j = 1; i < alldivs.length; i++, j += 0.25) {
+    // Manages display of elements as well, to account for slower servers and computers
+    alldivs[i].style.display = 'block';
     alldivs[i].style.animation = 'generate ' + j + 's ease';
 }
 
