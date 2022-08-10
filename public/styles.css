@@ -8,7 +8,8 @@
 body {
     background-color: #c4c4c4;
     scrollbar-width: auto;
-    scrollbar-color: #000, #c4c4c4;
+    overflow-y: scroll;
+    scrollbar-color: #36393f, #c4c4c4;
     margin: 0 auto;
 }
 
@@ -21,7 +22,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #000;
+    background-color: #36393f;
     border-radius: 8px;
     border: 3px solid #c4c4c4;
 }
@@ -268,7 +269,7 @@ iframe {
     height: 100vh;
     transform: translate(-15%, 0px);
     color: white;
-    overflow: auto;
+    overflow: scroll;
 }
 
 #minichatbody {
@@ -408,7 +409,7 @@ iframe {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100vw - 140px);
+    width: calc(100vw - 151px);
     height: 100%;
     z-index: 3;
     pointer-events: none;
@@ -431,7 +432,7 @@ iframe {
     justify-content: space-evenly; 
     align-items: stretch;
     gap: 5px;
-    width: calc(100vw - 140px);
+    width: calc(100vw - 151px);
     height: auto;
     overflow: visible;
 }
