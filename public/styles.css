@@ -214,12 +214,12 @@ ul li button:hover {
     opacity: 1;
     position: fixed;
     display: none;
-    z-index: 1;
+    z-index: 4;
 }
 
 #enterformcontainer {
     width: 100%;
-    z-index: 1;
+    z-index: 4;
 }
 
 #chat_container #display,
@@ -255,13 +255,13 @@ iframe {
     height: 100%;
     width: 60vw;
     display: none;
-    z-index: 1;
+    z-index: 4;
     border-radius: 30px;
 }
 
 .chat {
     display: flex;
-    z-index: 1;
+    z-index: 4;
 }
 
 .chat__sidebar {
@@ -404,6 +404,25 @@ iframe {
     }
   }
 
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 140px);
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+    background: #c4c4c4;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+#fader.activate {
+    opacity: 1;
+    animation-name: fadeIn;
+}
+
 /* Information flexboxes */
 
 .common, .infopage {
@@ -414,7 +433,7 @@ iframe {
     gap: 5px;
     width: calc(100vw - 140px);
     height: auto;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .common div {
