@@ -40,6 +40,7 @@ ul {
 
 ul li button {
     text-align: center;
+    min-width: 115px;
     text-decoration: none;
     border: none;
     border-radius: 0.5rem;
@@ -444,4 +445,8 @@ iframe {
     border: 4px solid #889aff;
     border-radius: 30px;
     display: none;
+}
+
+table {
+    color: inherit;
 }

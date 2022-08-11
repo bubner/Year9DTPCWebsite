@@ -59,10 +59,6 @@ app.get("/case", (req, res) => {
     res.sendFile('./parts/case.html', { root: __dirname });
 });
 
-app.get("/misc", (req, res) => {
-    res.sendFile('./parts/other.html', { root: __dirname });
-});
-
 // Handles connection through socket.io websocket when minichat is initialised
 io.on("connection", socket => {
     console.log("New WebSocket connection");
