@@ -450,3 +450,7 @@ iframe {
 table {
     color: inherit;
 }
+
+.itemchoice ul {
+    all: revert !important;
+}
