@@ -60,7 +60,7 @@ ul li button:hover {
     background-color: #5e76ff;
 }
 
-.disabled { 
+.disabled {
     background-color: #374597 !important;
     color: white !important;
 }
@@ -133,7 +133,7 @@ ul li button:hover {
     .sidebar br {
         line-height: 0.1;
     }
-    
+
     .sidebar button {
         padding: 8px 18px;
     }
@@ -149,18 +149,19 @@ ul li button:hover {
     .sidebar button {
         display: none;
     }
-    #notice { 
+
+    #notice {
         display: block;
     }
 }
 
 @media (min-height: 376px) {
-    #notice { 
+    #notice {
         display: none;
     }
 }
 
-#notice { 
+#notice {
     color: white;
     font-style: italic;
 }
@@ -361,7 +362,7 @@ iframe {
     border-radius: 30px;
 }
 
-/* Custom animations */ 
+/* Custom animations */
 
 @keyframes moveIn {
     0% {
@@ -400,11 +401,12 @@ iframe {
         transform: translate(0px, 80px);
         opacity: 0;
     }
+
     100% {
         transform: translate(0px, 0px);
         opacity: 1;
     }
-  }
+}
 
 #fader {
     position: fixed;
@@ -427,10 +429,11 @@ iframe {
 
 /* Information flexboxes */
 
-.common, .infopage {
+.common,
+.infopage {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     align-items: stretch;
     gap: 5px;
     width: calc(100vw - 151px);

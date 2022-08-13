@@ -9,14 +9,14 @@ const addUser = ({ id, username, room }) => {
   // The entered username should be in the query string
   room = "livechat";
   // Uses one room only, as we don't need more than one
-    
+
   // Checksum
   if (!username || !room) {
     return {
       error: "Username and room are required!"
     };
   }
-    
+
   // Check if the given name was already provided, and handle it accordingly if it was not
   const existingUser = users.find(user => {
     return user.room === room && user.username === username;
@@ -27,7 +27,7 @@ const addUser = ({ id, username, room }) => {
       error: "Username is in use!"
     };
   }
-    
+
   // If everything checks out, pass it to the array
   const user = { id, username, room };
   users.push(user);
