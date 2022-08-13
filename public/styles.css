@@ -106,20 +106,20 @@ ul li button:hover {
 }
 
 @media (max-height: 720px) {
-    .sidebar br {
-        line-height: 0.7;
+    .sidebar br, .sidebar ul {
+        line-height: 0.7 !important;
     }
 }
 
 @media (max-height: 660px) {
-    .sidebar br {
-        line-height: 0.4;
+    .sidebar br, .sidebar ul {
+        line-height: 0.4 !important;
     }
 }
 
 @media (max-height: 610px) {
-    .sidebar br {
-        line-height: 0.2;
+    .sidebar br, .sidebar ul {
+        line-height: 0.2 !important;
     }
 }
 
@@ -130,8 +130,8 @@ ul li button:hover {
 }
 
 @media (max-height: 540px) {
-    .sidebar br {
-        line-height: 0.1;
+    .sidebar br, .sidebar ul {
+        line-height: 0.1 !important;
     }
 
     .sidebar button {
@@ -162,6 +162,7 @@ ul li button:hover {
 }
 
 #notice {
+    line-height: normal !important;
     color: white;
     font-style: italic;
 }
@@ -271,7 +272,7 @@ iframe {
     height: 100vh;
     transform: translate(-15%, 0px);
     color: white;
-    overflow: scroll;
+    overflow: auto;
 }
 
 #minichatbody {
@@ -294,7 +295,7 @@ iframe {
     background-color: #36393f;
     border-radius: 15px;
     padding: 24px 24px 0 24px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .message {
@@ -323,7 +324,7 @@ iframe {
     border-radius: 40px;
     margin-top: 16px;
     padding: 24px;
-    padding-bottom: 5px;
+    padding-bottom: 17px;
 }
 
 .compose form {
@@ -347,7 +348,7 @@ iframe {
 }
 
 .users {
-    color: black;
+    color: white;
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
