@@ -1,0 +1,134 @@
+<!-- Lucas Bubner, 2022 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Year 9 Digital Technology interactive website.">
+    <meta name="author" content="Lucas Bubner, 2022">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PC Analysis</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="chatmanager.js" defer></script>
+    <script src="animmanager.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <svg id="fader"></svg>
+    <div id="chatbox_button" onclick="chattoggle();">
+        <img src="images/chatbox.png" title="Open and close built-in live chat">
+    </div>
+    <div id="alt_button" onclick="altbutton();">
+        <img src="images/gdoc.svg" title="View original Google Doc">
+    </div>
+    <div id="chat">
+        <div id="chat_container" style="display: none;">
+            <div id="enterformcontainer">
+                <div id="enterform" style="display: none;" method="POST">
+                    The chatroom feature has been removed after migration to a new server. (04/10/23)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <p class="sidebartext">MEMORY</p>
+                <p id="notice">Please use a bigger screen to navigate this site.</p>
+            </li>
+            <li><a href="/"><button type="submit">Info</button></a></li> <br>
+            <li><a href="/cpu.html"><button type="submit">CPU</button></a></li> <br>
+            <li><a href="/mobo.html"><button type="submit">Motherboard</button></a></li> <br>
+            <li><a href="/gpu.html"><button type="submit">GPU</button></a></li> <br>
+            <li><a href="/ram.html"><button type="submit" class="disabled" disabled>Memory</button></a></li> <br>
+            <li><a href="/psu.html"><button type="submit">PSU</button></a></li> <br>
+            <li><a href="/cool.html"><button type="submit">Cooling</button></a></li> <br>
+            <li><a href="/stor.html"><button type="submit">Storage</button></a></li> <br>
+            <li><a href="/case.html"><button type="submit">Case</button></a></li> <br>
+        </ul>
+    </div>
+    <div class="common">
+        <div class="itemname">
+            <pre>
+<b>ITEM</b>
+Random Access Memory (RAM)
+<i>x2 G.Skill Trident Z5 32 GB (2x16 GB)</i>
+            
+Price: $599 + $599</pre>
+        </div>
+        <div class="itemimage">
+            <img src="images/ram.png" width="375" height="auto">
+            <img src="images/ram.png" width="375" height="auto">
+        </div>
+        <div class="itemlocation">
+            <img src="images/diagrams/ram.png" width="300" height="auto">
+        </div>
+        <div class="iteminfo">
+            <b>INFORMATION</b>
+            <pre>
+            The hardware in a computing device called RAM (Random Access Memory) stores the operating system (OS),
+            application programs, and data that are currently in use so that the processor of the device may access
+            them rapidly. The primary memory of a computer is RAM. Compared to other forms of storage like a hard disk
+            drive (HDD), solid-state drive (SSD), or optical drive, it is significantly faster to read from and write to.
+            Random Access Memory is volatile. This implies that information is kept in RAM while the computer is running,
+            but it is erased when the machine is powered off. The operating system and other information are frequently
+            loaded from an HDD or SSD into RAM when the machine is restarted.</pre>
+        </div>
+        <div class="itemdescription">
+            <b>DESCRIPTION</b>
+            <pre>
+            The G.Skill Trident Z5 are DDR5 standard high-performance memory sticks 16 GB in size. They host clock speeds of
+            6000 MHz per stick and are capable of overclocking to higher speeds if required. Together, they are able
+            to perform storage operations extremely quickly and without delay (matters of nanoseconds), which is why I chose
+            these sticks of RAM for the computer.</pre>
+        </div>
+        <div class="itemchoice">
+            <b>WHY THIS ITEM</b>
+            <ul>
+                <li>High-performance DDR5-standard RAM</li>
+                <li>4x16GB for a RAM quantity of 64GB</li>
+                <li>Extremely fast RAM clock speed of 6000MHz</li>
+                <li>Very fast read/write speeds which will mean more operations for the CPU</li>
+                <li>Extremely efficient due to the high clock speed</li>
+            </ul>
+        </div>
+        <div class="itemstats">
+            <b>PERFORMANCE</b>
+            <table>
+                <tr>
+                    <td>Clock Speed</td>
+                    <td>6000 MHz</td>
+                </tr>
+                <tr>
+                    <td>Supports</td>
+                    <td>12th Gen Intel + Z690 chipset</td>
+                </tr>
+                <tr>
+                    <td>Overclocking</td>
+                    <td>Intel XMP 3.0</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>DDR5</td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>x4 16 GB (64 GB total)</td>
+                </tr>
+            </table>
+        </div>
+        <div class="itemnotes">
+            <b>ADDITIONAL</b>
+            <pre>
+            Each RAM stick has a 6000 MHz clock speed, which is exceptionally high performance for memory.
+            The higher the clock speed, the more operations that can be read and accessed per second. This
+            is why it is important to have high clock speeds for RAM, as gaming relies heavily on this access cycle.</pre>
+        </div>
+    </div>
+</body>
+
+</html>

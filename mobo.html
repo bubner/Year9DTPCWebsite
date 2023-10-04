@@ -1,0 +1,149 @@
+<!-- Lucas Bubner, 2022 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Year 9 Digital Technology interactive website.">
+    <meta name="author" content="Lucas Bubner, 2022">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PC Analysis</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="chatmanager.js" defer></script>
+    <script src="animmanager.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <svg id="fader"></svg>
+    <div id="chatbox_button" onclick="chattoggle();">
+        <img src="images/chatbox.png" title="Open and close built-in live chat">
+    </div>
+    <div id="alt_button" onclick="altbutton();">
+        <img src="images/gdoc.svg" title="View original Google Doc">
+    </div>
+    <div id="chat">
+        <div id="chat_container" style="display: none;">
+            <div id="enterformcontainer">
+                <div id="enterform" style="display: none;" method="POST">
+                    The chatroom feature has been removed after migration to a new server. (04/10/23)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <p class="sidebartext">MOBO</p>
+                <p id="notice">Please use a bigger screen to navigate this site.</p>
+            </li>
+            <li><a href="/"><button type="submit">Info</button></a></li> <br>
+            <li><a href="/cpu.html"><button type="submit">CPU</button></a></li> <br>
+            <li><a href="/mobo.html"><button type="submit" class="disabled" disabled>Motherboard</button></a></li> <br>
+            <li><a href="/gpu.html"><button type="submit">GPU</button></a></li> <br>
+            <li><a href="/ram.html"><button type="submit">Memory</button></a></li> <br>
+            <li><a href="/psu.html"><button type="submit">PSU</button></a></li> <br>
+            <li><a href="/cool.html"><button type="submit">Cooling</button></a></li> <br>
+            <li><a href="/stor.html"><button type="submit">Storage</button></a></li> <br>
+            <li><a href="/case.html"><button type="submit">Case</button></a></li> <br>
+        </ul>
+    </div>
+    <div class="common">
+        <div class="itemname">
+            <pre>
+<b>ITEM</b>
+Motherboard (Mobo)
+<i>MSI MEG Z690 GODLIKE</i>
+            
+Price: $2035</pre>
+        </div>
+        <div class="itemimage">
+            <img src="images/mobo.png" width="330" height="auto">
+        </div>
+        <div class="itemlocation">
+            <img src="images/diagrams/mobo.png" width="330" height="auto">
+        </div>
+        <div class="iteminfo">
+            <b>INFORMATION</b>
+            <pre>
+            Connectivity between a computer's hardware parts, such as the CPU, RAM, hard drive, and graphics card, is provided by the motherboard.
+            There are several types of motherboards made to accommodate various sizes and types of computers, and because
+            of this, not every CPU and memory type is compatible with every motherboard.
+            A motherboard also has the BIOS (Basic Input/Output System), a small chip on the computer that contains
+            a small amount of information for the operating system kernel about what devices are currently connected to the motherboard.</pre>
+        </div>
+        <div class="itemdescription">
+            <b>DESCRIPTION</b>
+            <pre>
+            The MSI MEG Z690 GODLIKE is a high-end feature-rich E-ATX form factor motherboard designed for the purpose
+            of the widest range of support and performance. It hosts a built in LCD touch screen for quick system info
+            and tuning, and also has support for the latest standards such as WiFi 6E, 10G ethernet, and DDR5, just
+            to name a few.
+            
+            This motherboard has LGA 1700 pins with four DIMM slots and two PCI-E x16 lane slots, alongside x5 M.2 SSD slots.</pre>
+        </div>
+        <div class="itemchoice">
+            <b>WHY THIS ITEM</b>
+            <ul>
+                <li>Dual-channel DDR5 memory support (x4) (128GB max) (6666MHz support)</li>
+                <li>M.2 support with x6 connectors, RAID support</li>
+                <li>Watercooling support</li>
+                <li>High-performance built-in network card (WiFi 6e standard, Bluetooth 5)</li>
+                <li>10G networking capabilities</li>
+                <li>Built-in sound card and other essential features</li>
+                <li>Direct 20+2-phase VRM for strong power delivery</li>
+                <li>USB 3.2 support</li>
+                <li>NVIDIA SLI and CrossFire support</li>
+                <li>TPM 2.0, Windows 11 support built-in</li>
+                <li>Thermal shields for M.2 cooling</li>
+                <li>Plenty of other features such as built-in LCD</li>
+            </ul>
+        </div>
+        <div class="itemstats">
+            <b>PERFORMANCE</b>
+            <table>
+                <tr>
+                    <td>CPU Socket</td>
+                    <td>LGA 1700, supports i9</td>
+                </tr>
+                <tr>
+                    <td>Chipset</td>
+                    <td>Intel Z690</td>
+                </tr>
+                <tr>
+                    <td>Memory</td>
+                    <td>x4 DDR5 Dual Channel @ 6666MHz</td>
+                </tr>
+                <tr>
+                    <td>I/O</td>
+                    <td>USB 3.2, Thunderbolt 4, Mini DisplayPort, 7.1 HD Audio</td>
+                </tr>
+                <tr>
+                    <td>SATA & M.2 slots</td>
+                    <td>6 M.2 interfaces, 6 SATA III interfaces</td>
+                </tr>
+                <tr>
+                    <td>NVIDIA SLI & AMD CrossFire</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Networking</td>
+                    <td>x1 Intel® Wi-Fi 6E module <br> x1 Aquantia® AQC113CS 10Gbps LAN controller <br> x1 Intel® I225-V
+                        2.5Gbps LAN controller</td>
+                </tr>
+            </table>
+        </div>
+        <div class="itemnotes">
+            <b>ADDITIONAL</b>
+            <pre>
+            This motherboard is the most high-end due to abundance of compatibilities and features, which is required
+            for some of the features in this computer (mainly, SLI, DDR5, and fast networking), which is why this motherboard was selected.
+            The motherboard also has room for an additional x4 SATA connections (..if 28 TB of storage isn't enough).</pre>
+        </div>
+    </div>
+</body>
+
+</html>

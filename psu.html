@@ -1,0 +1,131 @@
+<!-- Lucas Bubner, 2022 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Year 9 Digital Technology interactive website.">
+    <meta name="author" content="Lucas Bubner, 2022">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PC Analysis</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="chatmanager.js" defer></script>
+    <script src="animmanager.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <svg id="fader"></svg>
+    <div id="chatbox_button" onclick="chattoggle();">
+        <img src="images/chatbox.png" title="Open and close built-in live chat">
+    </div>
+    <div id="alt_button" onclick="altbutton();">
+        <img src="images/gdoc.svg" title="View original Google Doc">
+    </div>
+    <div id="chat">
+        <div id="chat_container" style="display: none;">
+            <div id="enterformcontainer">
+                <div id="enterform" style="display: none;" method="POST">
+                    The chatroom feature has been removed after migration to a new server. (04/10/23)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <p class="sidebartext">PSU</p>
+                <p id="notice">Please use a bigger screen to navigate this site.</p>
+            </li>
+            <li><a href="/"><button type="submit">Info</button></a></li> <br>
+            <li><a href="/cpu.html"><button type="submit">CPU</button></a></li> <br>
+            <li><a href="/mobo.html"><button type="submit">Motherboard</button></a></li> <br>
+            <li><a href="/gpu.html"><button type="submit">GPU</button></a></li> <br>
+            <li><a href="/ram.html"><button type="submit">Memory</button></a></li> <br>
+            <li><a href="/psu.html"><button type="submit" class="disabled" disabled>PSU</button></a></li> <br>
+            <li><a href="/cool.html"><button type="submit">Cooling</button></a></li> <br>
+            <li><a href="/stor.html"><button type="submit">Storage</button></a></li> <br>
+            <li><a href="/case.html"><button type="submit">Case</button></a></li> <br>
+        </ul>
+    </div>
+    <div class="common">
+        <div class="itemname">
+            <pre>
+<b>ITEM</b>
+Power Supply Unit (PSU)
+<i>Silverstone HELA 2050 Platinum</i>
+
+Price: $695</pre>
+        </div>
+        <div class="itemimage">
+            <img src="images/psu.png" width="400" height="auto">
+        </div>
+        <div class="itemlocation">
+            <img src="images/diagrams/psu.png" width="320" height="auto">
+        </div>
+        <div class="iteminfo">
+            <b>INFORMATION</b>
+            <pre>
+                To ensure the proper operation of components within a computer, the Power Supply Unit (PSU) is a piece of hardware that transforms
+                outlet power into useable power. In order to use low-voltage regulated DC power for internal computer components, it specifically
+                transforms mains AC into lower voltage DC current. Additionally, it manages overheating by controlling voltage. The power supply
+                is crucial, to put it simply. Without a power supply PC, other internal components will not operate correctly as they would have
+                unregulated electricity flowing through them. The power supply device is often found at the rear of the computer casing.</pre>
+        </div>
+        <div class="itemdescription">
+            <b>DESCRIPTION</b>
+            <pre>
+                The HELA 2050 Platinum is a one-of-a-kind power supply, offering up an astounding 2050 Watts
+                of Platinum-rated power, along with fully-modular cables, a compact 180mm length,
+                a semi-fanless mode, and compatibility with the latest ATX and PCIe power specs.
+            
+                The HELA 2050 is one of the most powerful power supply devices available, and has a very low operating temperature.</pre>
+        </div>
+        <div class="itemchoice">
+            <b>WHY THIS ITEM</b>
+            <ul>
+                <li>Extremely high wattage at 2050W rated, which should be enough to power the computer at load spikes
+                </li>
+                <li>ATX size power supply, which means it should be compatible with EATX</li>
+                <li>Rated for efficiency and quietness under load with a very low operating temperature of 50 C</li>
+                <li>More than enough rated wattage to supply power to the computer at load spikes (tested online at
+                    around 1800 W)</li>
+            </ul>
+        </div>
+        <div class="itemstats">
+            <b>PERFORMANCE</b>
+            <table>
+                <tr>
+                    <td>Rated Wattage</td>
+                    <td>2050 W</td>
+                </tr>
+                <tr>
+                    <td>Operating Temperature</td>
+                    <td>50 C 2050 W fan mode, 800W fanless mode</td>
+                </tr>
+                <tr>
+                    <td>Connectivity</td>
+                    <td>Standard ATX <br> Intel ATX12V 2.52 support <br> 12-pin GPU connectors</td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>180mm length</td>
+                </tr>
+                <tr>
+                    <td>Power Density</td>
+                    <td>882 W per liter</td>
+            </table>
+        </div>
+        <div class="itemnotes">
+            <b>ADDITIONAL</b>
+            <pre>
+            This power supply unit is one of the highest in wattage and is required in the build due to the
+            high-power CPU and two high-end GPUs running at the same time, which demands a lot of current. (>1800 W)</pre>
+        </div>
+    </div>
+</body>
+
+</html>

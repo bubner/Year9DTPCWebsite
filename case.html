@@ -1,0 +1,146 @@
+<!-- Lucas Bubner, 2022 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Year 9 Digital Technology interactive website.">
+    <meta name="author" content="Lucas Bubner, 2022">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PC Analysis</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="chatmanager.js" defer></script>
+    <script src="animmanager.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <svg id="fader"></svg>
+    <div id="chatbox_button" onclick="chattoggle();">
+        <img src="images/chatbox.png" title="Open and close built-in live chat">
+    </div>
+    <div id="alt_button" onclick="altbutton();">
+        <img src="images/gdoc.svg" title="View original Google Doc">
+    </div>
+    <div id="chat">
+        <div id="chat_container" style="display: none;">
+            <div id="enterformcontainer">
+                <div id="enterform" style="display: none;" method="POST">
+                    The chatroom feature has been removed after migration to a new server. (04/10/23)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <p class="sidebartext">CASE</p>
+                <p id="notice">Please use a bigger screen to navigate this site.</p>
+            </li>
+            <li><a href="/"><button type="submit">Info</button></a></li> <br>
+            <li><a href="/cpu.html"><button type="submit">CPU</button></a></li> <br>
+            <li><a href="/mobo.html"><button type="submit">Motherboard</button></a></li> <br>
+            <li><a href="/gpu.html"><button type="submit">GPU</button></a></li> <br>
+            <li><a href="/ram.html"><button type="submit">Memory</button></a></li> <br>
+            <li><a href="/psu.html"><button type="submit">PSU</button></a></li> <br>
+            <li><a href="/cool.html"><button type="submit">Cooling</button></a></li> <br>
+            <li><a href="/stor.html"><button type="submit">Storage</button></a></li> <br>
+            <li><a href="/case.html"><button type="submit" class="disabled" disabled>Case</button></a></li> <br>
+        </ul>
+    </div>
+    <div class="common">
+        <div class="itemname">
+            <pre>
+<b>ITEM</b>
+Case
+<i>Gigabyte AORUS C700 Glass Full Tower ATX Case</i>
+
+Price: $599</pre>
+        </div>
+        <div class="itemimage">
+            <img src="images/case.png" width="300" height="auto">
+        </div>
+        <div class="itemlocation">
+            <img src="images/diagrams/case.png" width="320" height="auto">
+            <br>
+            <p style="font-size: 10px;">i think this one's obvious</p>
+        </div>
+        <div class="iteminfo">
+            <b>INFORMATION</b>
+            <pre>
+                All of the crucial and pricey components of a PC or other computing device are protected by a computer casing. Internal components for modest desktop units,
+                whole networks, and even sophisticated rackmount servers include items like the motherboard, chassis, discs, CPU, and more.
+                The desktop computer case aids in shielding the parts from physical harm, invasive foreign objects, and electrical tampering. The case's
+                design is crucial as well since differing forms might impact the airflow through the device, which is essential to keeping it cool and functional.
+                The enclosures also provide space for expansion slots, warning lights, graphics cards, RAM, and other server applications while keeping the internal
+                components isolated from one another. A computer case also gives style and aesthetic to all computer builds, which is a necessity
+                considering the fragile parts of a computer are not all that good looking on their own.</pre>
+        </div>
+        <div class="itemdescription">
+            <b>DESCRIPTION</b>
+            <pre>
+            The AORUS C700 Glass is a special E-ATX supporting computer case with an aluminuim metal and tempered glass design for sleek construction, optimal airflow,
+            and for an eye-catching design that embraces the highest of quality available on the market.
+        
+            The AORUS C700 Glass, alongside all of the other components, comes with built-in RGB and RGB case fans, for amazing style and airflow performance. Additionally,
+            it supports dual GPUs with an EATX fit and has a dedicated area for each component such as watercooling and other essential parts.</pre>
+        </div>
+        <div class="itemchoice">
+            <b>WHY THIS ITEM</b>
+            <ul>
+                <li>Supports EATX</li>
+                <li>Has case fans already installed, and can be swapped with radiator fans if required</li>
+                <li>Supports radiator and dual GPU size</li>
+                <li>RGB and has a slick design</li>
+                <li>Very large amount of I/O on the front panel</li>
+                <li>PSU shroud design to hide the large amounts of cables this PC will use</li>
+                <li>Drive bays that can support the SSDs away from sight</li>
+            </ul>
+        </div>
+        <div class="itemstats">
+            <b>PERFORMANCE</b>
+            <table>
+                <tr>
+                    <td>Form Factor Support</td>
+                    <td>Up to EATX</td>
+                </tr>
+                <tr>
+                    <td>I/O</td>
+                    <td>x3 USB 3.0 <br> x1 USB 3.1 Gen2 Type-C</td>
+                </tr>
+                <tr>
+                    <td>GPU installation</td>
+                    <td>Supports multi-vertical and horizontal configurations</td>
+                </tr>
+                <tr>
+                    <td>Watercooling compatibility</td>
+                    <td>Supports up to 420mm configurations</td>
+                </tr>
+                <tr>
+                    <td>Power supply configuration</td>
+                    <td>Hidden shroud design</td>
+                </tr>
+                <tr>
+                    <td>Construction</td>
+                    <td>Aluminium + Full-size dual tempered glass</td>
+                </tr>
+                <tr>
+                    <td>Drive bays</td>
+                    <td>x6 2.5" <br> x4 3.5"/2.5"</td>
+                </tr>
+            </table>
+        </div>
+        <div class="itemnotes">
+            <b>ADDITIONAL</b>
+            <pre>
+            This case is not only necessary for all of the installation of the high-end components, but is also the finishing touch for
+            all of the RGB elements in the computer. As this case can support multiple GPUs, watercooling, and also comes with bonus
+            case fans, this case is perfect for the beast of a computer that lies inside.</pre>
+        </div>
+    </div>
+</body>
+
+</html>
